@@ -1,0 +1,132 @@
+<!--FIFTH (5th) BLOCK - 2 Colum panel ---------------------------------------------------------------->
+  <div class="large-3 columns">
+    <div class="panel" data-animate-scroll='{"alpha": "0",
+                        "y":"50",
+                        "duration": "1.75",
+                        "scaleX": "0",
+                        "scaleY": "0",
+                        "ease": "Elastic.easeIn"}'>
+  <p>
+  <img src="img_aquarium.png" alt="Aquarium" style="width:200px; height:200px;"/>
+  <h3 class="w3-center">Text that should be here</h3>
+  </p>
+  </div>
+  </div>
+  <!--FIFTH (5th) BLOCK - 2 Colum panel ---------------------------------------------------------------->
+  <div class="large-3 columns">
+
+  <p>
+    <img src="img_stadium.png"
+    data-animate-scroll="{&quot;x&quot;: &quot;-100&quot;,&quot;y&quot;: &quot;0&quot;,
+    &quot;alpha&quot;: &quot;0&quot;, &quot;duration&quot;: &quot;.5&quot;}"
+    class="animateScroll" style="transform: translate3d(0px, 0px, 1px);
+    visibility: inherit; opacity: 1; transform-style: flat;"/>
+
+  </div>
+  <!--FIFTH (5th) BLOCK - 2 Colum panel ---------------------------------------------------------------->
+  <div class="large-3 columns">
+
+  <p>
+
+  <img src="img_punky.png"
+  data-animate-scroll="{&quot;x&quot;: &quot;-100&quot;,&quot;y&quot;: &quot;0&quot;,
+  &quot;alpha&quot;: &quot;0&quot;, &quot;duration&quot;: &quot;.5&quot;}"
+  class="animateScroll" style="transform: translate3d(0px, 0px, 1px);
+  visibility: inherit; opacity: 1; transform-style: flat;" height="200" width="200"/>
+
+  </p>
+
+  </div>
+  <!--FIFTH (5th) BLOCK - 2 Colum panel ---------------------------------------------------------------->
+  <div class="large-3 columns">
+  <div class="panel" data-animate-scroll='{"x": "-300",
+                      "y": "-200",
+                      "scaleX": "0.85",
+                      "scaleY": "0.85",
+                      "alpha": "0",
+                      "duration": "2",
+                      "rotationY":"720",
+                      "rotationX":"45",
+                      "rotation":"45",
+                      "z":"-30"}'>
+  <p>
+  <img src="img_stadium.png" alt="Bleachers Stadium" style="width:200px; height:200px;"/>
+  </p>
+  </div>
+  </div>
+
+  <!--GOOGLE MAPS STUFF-->
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <!-- Add Google Maps -->
+        <div id="googleMap" class="w3-round-large"></div>
+      </div>
+      <div class="w3-col m8 w3-container w3-section">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker w3-hover-text-black" style="width:30px"></i> Stamford, CT, USA<br>
+          <i class="fa fa-phone w3-hover-text-black" style="width:30px"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope w3-hover-text-black" style="width:30px"> </i> fernando.dsgn@outlook.com<br>
+        </div>
+        <p>Swing by for a cup of coffee, or leave me a note:</p>
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Comment">
+        <button class="w3-btn w3-section w3-right">SEND</button>
+      </div>
+    </div>
+  </div>
+
+  !-- Add Google Maps -->
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+  var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+  function initialize() {
+  var mapProp = {
+    center: myCenter,
+    zoom: 12,
+    scrollwheel: false,
+    draggable: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+
+  marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  }
+
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+      }
+  }
+  </script>
